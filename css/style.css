@@ -31,3 +31,20 @@ footer {
     width: 100%;
     height: 80px;
 }
+
+/* !media query */
+
+/* small device >576 */
+@media screen and (min-width: 576px) {
+
+}
+
+/* medium device >576 */
+@media screen and (min-width: 768px) {
+
+}
+
+/* large device >576 */
+@media screen and (min-width: 992px) {
+    
+}
