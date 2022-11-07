@@ -6,9 +6,20 @@
     box-sizing: border-box;
 }
 
+:root {
+    --main-bg: #131922;
+    --secondary-text-color: #75797F;
+    --top-bat-color: #070B12;
+    
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 100%;
+}
+
 ul li {
-    text-decoration: none;
-    padding: 5px
+    list-style-type: none;
 }
 
 a{
@@ -16,16 +27,36 @@ a{
     color: inherit;
 }
 
+.fl {
+    display: flex;
+}
+
+.fl-col {
+    display: flex;
+    flex-direction: column;
+}
+
+.fl-cc {
+    justify-content: center;
+    align-items: center;
+}
+
 /* wrapper */
 .wrapper {
     display: flex;
-    flex-wrap: wrap;
+}
+
+/* style text */
+.sub-title {
+    padding: 5px 0;
+    font-size: .8rem;
+    color: var(--secondary-text-color);
 }
 
 /* header */
 header {
     background-color: black;
-    width: 150px;
+    width: 225px;
     height: calc(100vh - 80px);
     color: white;
     position: fixed;
@@ -33,60 +64,112 @@ header {
     left: 0;
 }
 
+.header-container {
+    padding-left: 10px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-between;
+}
+
+.header-container ul.home {
+    margin-bottom: 14px;
+}
+
+.header-container ul li{
+    padding: 8px 0;
+    color: var(--secondary-text-color);
+    font-size: .8rem;
+}
+
+.logo{
+    width: 130px;
+    height: 90px;
+    padding-top: 15px;
+}
+
+.logo img {
+    width: 100%;
+}
+
+.header-top li:first-child {
+    color: white;
+    font-weight: 500;
+}
+
 /* main */
 main {
-    background-color: grey;
-    flex-grow: 1;
+    background-color: var(--main-bg);
+    width: calc(100vw - 225px);
     color: white;
-    margin-left: 150px;
+    margin-left: 225px;
+}
+
+.main-container {
+    padding: 15px 20px;
 }
 
 .main-top-bar {
-    background-color: rgb(172, 172, 172);
     width: 100%;
-    height: 80px;
+    height: 90px;
+    background-color: var(--top-bat-color);
 }
 
 .nav-bar-top {
     width: 100%;
-    height: 30px;
-    background-color: aqua;
+    text-transform: uppercase;
+    color: var(--secondary-text-color);
+}
+
+.nav-bar-top ul {
+    flex-wrap: wrap;
+}
+
+.nav-bar-top ul li {
+    text-decoration: none;
+    padding: 0 8px;
+    line-height: 20px;
+    font-size: .9rem;
+    font-weight: 500;
 }
 
 .main-row {
     width: 100%;
-    height: 250px;
-    background-color: rgb(255, 104, 104);
-    border: 2px solid green;
-    margin: 20px 0;
-
-    display: flex;
-    flex-wrap: wrap;
+    margin: 35px 0;
 }
 
-.main-row h1 {
+.main-row-title {
     width: 100%;
-    padding-bottom: 20px;
+}
+
+.main-row-box {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 10px;
+    gap: 5px;
 }
 
 .box-song {
-    margin: 0 10px;
-}
-
-.box-song h2,
-.box-song .sub-title {
     text-align: center;
+    width: calc(100% / 6);
+    max-width: 180px;
+    margin-top: 15px;
 }
 
-.box-song .sub-title {
-    padding: 5px 0;
+.box-song img {
+    width: 100%;
+}
+
+.box-song-info {
+    padding-top: 10px;
+}
+
+.box-song-info h4 {
+    padding-bottom: 4px;
 }
 
 /* style box-song */
-img {
-    width: 130px;
-}
-
 /* footer */
 footer {
     background-color: darkgray;
@@ -95,21 +178,52 @@ footer {
     position: fixed;
     bottom: 0;
     left: 0;
+    display: flex;
+}
+
+.footer-left {
+    width: 25%;
+    height: 100%;
+    border: 2px solid green;
+}
+
+.footer-main {
+    width: 50%;
+    height: 100%;
+    border: 2px solid white;
+}
+
+.footer-right {
+    width: 25%;
+    height: 100%;
+    border: 2px solid green;
 }
 
 /* !media query */
+/* large device >992 */
+@media screen and (max-width: 992px) {
+    header {
+        background-color: green;
+    }
+
+    .main-row-box {
+    }
+
+}
+
+/* medium device >768 */
+@media screen and (max-width: 768px) {
+    header {
+            background-color: pink;
+        }
+
+
+}
 
 /* small device >576 */
-@media screen and (min-width: 576px) {
-
+@media screen and (max-width: 576px) {
+    header {
+            background-color: red;
+        }
 }
 
-/* medium device >576 */
-@media screen and (min-width: 768px) {
-
-}
-
-/* large device >576 */
-@media screen and (min-width: 992px) {
-
-}
