@@ -479,6 +479,18 @@ footer i {
     border-radius: 10px 0 0 10px;
 }
 
+/* hover style */
+ul li:hover,
+.header-container ul li:hover,
+.header-top ul li:nth-child(even):hover,
+.nav-bar-top ul li:hover,
+.main-footer-icons i:hover,
+.main-footer-icons .play:hover,
+.right-footer-icons>i:hover {
+    filter: contrast(.5);
+    color: rgba(233, 233, 233, 0.532);
+}
+
 
 /* ? media query */
 /* medium device >992 */
@@ -619,11 +631,6 @@ footer i {
     .header-top ul li:nth-child(even) {
         display: block;
     }
-
-     .header-top {
-        overflow: auto !important;
-    }
-
 
     .header-bottom .hb-wrapper > div {
         display: none;
