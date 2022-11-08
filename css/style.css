@@ -121,6 +121,20 @@ header .logo-small {
     margin-right: 3px;
 }
 
+.sideline-hover {
+    position: relative;
+}
+
+.sideline-hover:hover::before {
+    content: '';
+    position: absolute;
+    width: 2px;
+    height: 150%;
+    left:-2px;
+    top: -3px;
+    border-left: 2px solid #ADFF2E;
+}
+
 .plus {
     width: 35px;
     height: 35px;
@@ -204,6 +218,11 @@ main {
     cursor: pointer;
 }
 
+.btn-upgrade:hover {
+    background-color: #131922;
+    outline: 2px solid white;
+}
+
 .nav-bar-top {
     width: 100%;
     text-transform: uppercase;
@@ -252,7 +271,8 @@ main {
 }
 
 .box-song-img {
-    max-width: 180px;
+    max-width: 300px;
+    position: relative;
 }
 
 .box-song {
@@ -262,13 +282,35 @@ main {
     margin-top: 15px;
 }
 
-.overlay {
-    /* display: none; */
+.box-song-img:hover::before {
+    content: " ";
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgb(139, 139, 139);
+        background: -moz-radial-gradient(circle, rgba(139, 139, 139, 0.6555555327599789) 0%, rgba(251, 251, 251, 0) 100%);
+        background: -webkit-radial-gradient(circle, rgba(139, 139, 139, 0.6555555327599789) 0%, rgba(251, 251, 251, 0) 100%);
+        background: radial-gradient(circle, rgba(139, 139, 139, 0.6555555327599789) 0%, rgba(251, 251, 251, 0) 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#8b8b8b", endColorstr="#fbfbfb", GradientType=1);
+    z-index: 1;
 }
 
-/* .box-song:hover .box-song-img {
-    background-color: red;
-} */
+.overlay {
+    display: none;
+    position: absolute;
+    font-size: 4rem;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+}
+
+.box-song-img:hover .overlay {
+    display: block;
+}
 
 .box-song-img img {
     width: 100%;
@@ -276,7 +318,7 @@ main {
 
 .box-song-info {
     padding-top: 10px;
-    max-width: 180px;
+    max-width: 300px;
 }
 
 .box-song-info h4 {
@@ -506,6 +548,11 @@ footer i {
     footer {
         height: 60px;
     }
+
+    .right-bar-time {
+        width: 80px;
+        margin-right: 8px;
+    }
 }
 
 /* small device >576 */
@@ -568,6 +615,20 @@ footer i {
 
     main {
         margin-left: 40px;
+    }
+
+    .right-bar-time {
+        width: 70px;
+    }
+
+    .footer-icons {
+        margin-left: 8px;
+        width: 0%;
+    }
+
+    .footer-icons i {
+        padding-left: 5px;
+        font-size: .7rem;
     }
 }
 
