@@ -107,6 +107,14 @@ header .logo-small {
     display: none;
 }
 
+.header-top {
+    flex-direction: column;
+    overflow: hidden;
+}
+.playlist-scroll {
+    overflow: auto;
+}
+
 .header-top li:first-child {
     color: white;
 }
@@ -486,7 +494,8 @@ ul li:hover,
 .nav-bar-top ul li:hover,
 .main-footer-icons i:hover,
 .main-footer-icons .play:hover,
-.right-footer-icons>i:hover {
+.right-footer-icons>i:hover,
+.hb-wrapper .install-app:hover {
     color: white;
 }
 
@@ -678,4 +687,3 @@ ul li:hover,
     .main-footer-icons i {
         padding: 0 4px;
     }
-
