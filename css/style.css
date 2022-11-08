@@ -11,7 +11,6 @@
     --secondary-text-color: #75797F;
     --top-bat-color: #070B12;
     --footer-bg: #282828;
-    
 }
 
 body {
@@ -189,6 +188,20 @@ main {
     position: fixed;
     top: 0;
     right: 0;
+
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.btn-upgrade {
+    text-transform: uppercase;
+    color: white;
+    padding: 10px 30px;
+    border: 1px solid white;
+    border-radius: 20px;
+    margin-right: 5px;
+    font-size: .8rem;
+    cursor: pointer;
 }
 
 .nav-bar-top {
@@ -307,6 +320,7 @@ footer i {
 .footer-icons {
     color: var(--secondary-text-color);
     margin-left: 30px;
+    width: 20%;
 }
 
 .footer-icons i {
@@ -401,7 +415,7 @@ footer i {
 
 
 /* ? media query */
-/* large device >992 */
+/* medium device >992 */
 @media screen and (max-width: 992px) {
     .main-row-box {
         flex-wrap: wrap;
@@ -412,12 +426,72 @@ footer i {
         }
 }
 
-/* medium device >768 */
+/* medium-small device >768 */
 @media screen and (max-width: 768px) {
+
+/* font-size */
+    .sub-title,
+    .header-container ul li,
+    .footer-song-info h4,
+    .right-footer-icons {
+        font-size: .7rem;
+    }
+
+    .playlist li:nth-child(2),
+    .nav-bar-top ul li {
+        font-size: .8rem;
+    }
+
+    .footer-song-info .sub-title {
+        font-size: .6rem;
+    }
+
+    /* styles */
+    header {
+        width: 170px;
+    }
+    
+    .header-container {
+        padding-left: 15px;
+    }
+    
+    main {
+        margin-left: 170px;
+    }
+    
+    .main-top-bar {
+        height: 60px;
+    }
+
+    .btn-upgrade {
+        padding: 7px 20px;
+        font-size: .6rem;
+    }
+    
+    .main-container {
+        padding: 10px 15px;
+        margin-top: 60px;
+    }
+    
     .box-song {
         width: calc(100% / 2 - 10px);
     }
 
+    .main-footer-icons {
+        font-size: .8rem;
+    }
+
+    .main-footer-icons .play {
+        font-size: 1rem;
+    }
+
+    .footer-icons {
+        margin-left: 5px;
+    }
+
+    footer {
+        height: 60px;
+    }
 }
 
 /* small device >576 */
