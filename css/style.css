@@ -214,6 +214,20 @@ main {
     flex-wrap: wrap;
 }
 
+.underline-hover {
+    position: relative;
+}
+
+.underline-hover:hover::after {
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 0;
+    left: calc(50% - 15px);
+    bottom: -2px;
+    border-bottom: 2px solid #ADFF2E;
+}
+
 .nav-bar-top ul li {
     text-decoration: none;
     padding: 0 8px;
