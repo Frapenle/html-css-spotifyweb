@@ -154,7 +154,8 @@ header .logo-small {
 
 /* header bottom */
 .header-bottom {
-    margin-bottom: 8px;
+    padding-bottom: 8px;
+    background-color: black;
 }
 .hb-wrapper {
     gap: 10px;
@@ -342,7 +343,7 @@ footer {
     bottom: 0;
     left: 0;
     display: flex;
-    z-index: 3;
+    z-index: 4;
 }
 
 footer i {
@@ -617,6 +618,10 @@ footer i {
 
     .header-top ul li:nth-child(even) {
         display: block;
+    }
+
+     .header-top {
+        overflow: auto !important;
     }
 
 
