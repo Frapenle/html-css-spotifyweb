@@ -130,7 +130,7 @@ header .logo-small {
     position: absolute;
     width: 2px;
     height: 150%;
-    left:-2px;
+    left:-19px;
     top: -3px;
     border-left: 2px solid #ADFF2E;
 }
@@ -159,6 +159,7 @@ header .logo-small {
 .hb-wrapper {
     gap: 10px;
     align-items: center;
+    cursor: pointer;
 }
 
 .hb-wrapper .install-app {
@@ -202,6 +203,7 @@ main {
     position: fixed;
     top: 0;
     right: 0;
+    z-index: 1;
 
     justify-content: flex-end;
     align-items: center;
@@ -421,10 +423,12 @@ footer i {
 
 .footer-row-bottom .main-bar-time {
     width: 60%;
+    min-width: 100px;
     display: flex;
 }
 .footer-row-bottom .bar-time-played {
     width: 30%;
+    min-width: 20px;
     border: 2px solid white;
     border-radius: 10px 0 0 10px;
 }
@@ -482,9 +486,9 @@ footer i {
         }
 }
 
+
 /* medium-small device >768 */
 @media screen and (max-width: 768px) {
-
 /* font-size */
     .sub-title,
     .header-container ul li,
@@ -509,6 +513,16 @@ footer i {
     
     .header-container {
         padding-left: 15px;
+    }
+
+    .sideline-hover:hover::before {
+        content: '';
+        position: absolute;
+        width: 2px;
+        height: 150%;
+        left: -14px;
+        top: -3px;
+        border-left: 2px solid #ADFF2E;
     }
     
     main {
@@ -555,6 +569,7 @@ footer i {
     }
 }
 
+
 /* small device >576 */
 @media screen and (max-width: 576px) {
     header {
@@ -562,7 +577,8 @@ footer i {
     }
 
     .header-container {
-        padding-left: 8px;
+        padding-left: 0;
+        align-items: center;
     }
 
     header .logo {
@@ -576,6 +592,14 @@ footer i {
 
     header .logo-small img {
         width: 25px;
+    }
+
+    .sideline-hover {
+        display: none;
+    }
+
+    header .header-top {
+        margin: 0;
     }
 
     header .playlist {
@@ -617,18 +641,25 @@ footer i {
         margin-left: 40px;
     }
 
+    .footer-row-bottom span {
+        padding: 0 7px;
+    }
+
+    
     .right-bar-time {
         width: 70px;
     }
-
+    
     .footer-icons {
-        margin-left: 8px;
-        width: 0%;
+        margin-left: 5px;
     }
-
+    
     .footer-icons i {
         padding-left: 5px;
         font-size: .7rem;
     }
 }
+    .main-footer-icons i {
+        padding: 0 4px;
+    }
 
