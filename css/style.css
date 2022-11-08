@@ -487,8 +487,7 @@ ul li:hover,
 .main-footer-icons i:hover,
 .main-footer-icons .play:hover,
 .right-footer-icons>i:hover {
-    filter: contrast(.5);
-    color: rgba(233, 233, 233, 0.532);
+    color: white;
 }
 
 
