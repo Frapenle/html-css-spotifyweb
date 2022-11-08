@@ -119,7 +119,7 @@ header .logo-small {
     color: white;
 }
 
-.header-top ul li:nth-child(even) {
+.header-top-noscroll ul li:nth-child(even) {
     display: none;
 }
 
