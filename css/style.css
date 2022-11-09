@@ -278,6 +278,7 @@ main {
 }
 
 .main-row-title {
+    background-color: grey;
     width: 100%;
 }
 
@@ -505,6 +506,10 @@ ul li:hover,
 .hb-wrapper .install-app:hover,
 .footer-icons i:hover {
     color: white;
+}
+
+#plus:hover .plus{
+    background-color: white;
 }
 
 .main-footer-icons i:hover {
