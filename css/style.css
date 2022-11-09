@@ -515,6 +515,14 @@ ul li:hover,
     transform: scale(1.3);
 }
 
+.right-bar-time:hover .volume-on {
+    border: 2px solid #ADFF2E;
+}
+
+.footer-row-bottom .bar-time-played:hover {
+    border: 2px solid #ADFF2E;
+}
+
 
 /* ? media query */
 /* medium device >992 */
