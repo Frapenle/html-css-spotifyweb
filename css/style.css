@@ -80,7 +80,6 @@ header {
 }
 
 .header-container {
-    padding-left: 20px;
     display: flex;
     flex-direction: column;
     height: 100%;
@@ -114,6 +113,7 @@ header .logo-small {
 .header-top {
     flex-direction: column;
     overflow: hidden;
+    padding-left: 20px;
 }
 
 
@@ -144,7 +144,7 @@ header .logo-small {
     position: absolute;
     width: 2px;
     height: 150%;
-    left:-1px;
+    left:-20px;
     top: -3px;
     border-left: 2px solid #ADFF2E;
 }
@@ -170,6 +170,7 @@ header .logo-small {
 .header-bottom {
     padding-bottom: 8px;
     background-color: black;
+    padding-left: 20px;
 }
 .hb-wrapper {
     gap: 10px;
@@ -548,7 +549,8 @@ ul li:hover,
         width: 170px;
     }
     
-    .header-container {
+    .header-top,
+    .header-bottom {
         padding-left: 15px;
     }
 
@@ -614,7 +616,6 @@ ul li:hover,
     }
 
     .header-container {
-        padding-left: 0;
         align-items: center;
     }
 
